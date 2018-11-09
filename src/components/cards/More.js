@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  StyleSheet, View, Platform, StatusBar, Text, Image, TouchableOpacity
+  StyleSheet, View, Platform, StatusBar, Text, ImageBackground, TouchableOpacity
 } from 'react-native';
 import {
   Colors, Sizes, Styles
@@ -20,7 +20,7 @@ import * as Animatable from 'react-native-animatable';
 import UnderlinedButton from '../common/UnderlinedButton';
 import ProductCard from './ProductCard';
 
-// preload image
+// preload ImageBackground
 let moreCard = require('../../../res/img/more.gif');
 
 export default class More extends React.Component {
@@ -46,7 +46,8 @@ export default class More extends React.Component {
       <Animatable.View
         animation='flipInX'
         duration={300}>
-        <Image
+        <View>
+        <ImageBackground
           source={moreCard}
           style={[styles.container, this.props.style]}>
           <Animatable.View
@@ -55,7 +56,8 @@ export default class More extends React.Component {
             style={[styles.container, this.props.style]}>
             <ProductCard style={[styles.container, this.props.style]} />
           </Animatable.View>
-        </Image>
+        </ImageBackground>
+        </View>
       </Animatable.View>
     ): (
       <BarCodeScanner

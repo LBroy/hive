@@ -80,7 +80,7 @@ export default class SignupForm extends Component {
                 name: 'arrow-forward',
                 size: Sizes.Text
               }}
-              iconRight
+              rightIcon={{name: 'code'}}
               title='註冊 Sign Up'
               onPress={Actions.main}
               backgroundColor={Colors.PositiveButton}

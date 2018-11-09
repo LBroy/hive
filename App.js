@@ -5,7 +5,7 @@ import {
 import {
   Router, Scene, Actions, Stack, Overlay, Modal
 } from 'react-native-router-flux';
-import CardStackStyleInterpolator from 'react-navigation/src/views/CardStack/CardStackStyleInterpolator';
+// import CardStackStyleInterpolator from 'react-navigation/src/views/CardStack/CardStackStyleInterpolator';
 import {
   Colors, Sizes
 } from './src/Const';
@@ -31,8 +31,7 @@ export default class App extends React.Component {
         backgroundColor: Colors.MenuBackground,
         shadowOpacity: 1,
         shadowRadius: 3})}>
-        <Modal hideNavBar
-         transitionConfig={() => ({screenInterpolator: CardStackStyleInterpolator.forFadeFromBottomAndroid})}>
+        <Modal hideNavBar>
           <Stack
             hideNavBar
             key='root'>

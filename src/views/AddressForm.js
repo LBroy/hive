@@ -124,7 +124,7 @@ export default class AddressForm extends Component {
                 name: 'arrow-forward',
                 size: Sizes.Text
               }}
-              iconRight
+              rightIcon={{name: 'code'}}
               onPress={() => this.setState({
                 completed: true})}
               title='保存 Save'
